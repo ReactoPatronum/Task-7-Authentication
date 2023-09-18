@@ -1,6 +1,6 @@
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "http://localhost:3000/api/"
+    ? "https://task-7-authentication-next.vercel.app/api/"
     : "http://localhost:3000/api/";
 
 export default baseUrl;
