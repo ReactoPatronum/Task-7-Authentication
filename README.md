@@ -1,38 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Authentication and Role-based Permissions Example
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This project demonstrates the implementation of user authentication and role-based permissions using React, Redux, and a backend API. The application allows users to sign up, log in, and access different parts of the system based on their assigned roles (admin or user). Protected routes ensure that only authorized users can access certain pages.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Frontend:**
+  - React: A JavaScript library for building user interfaces.
+  - Redux: A state management library for managing application data.
+  - react-hook-form: A library for managing form state and validation.
+  - react-hot-toast: A customizable toast notification library.
+  - Next.js: A React framework for server-rendered applications.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Project Description
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This project focuses on building a user authentication system with role-based permissions. Key features include:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- User Registration: Users can sign up by providing a username, email, password, and selecting their role (admin or user).
+- User Login: Registered users can log in using their email and password.
+- Role-based Permissions: Users are assigned roles (admin or user) with different levels of access.
+- Protected Routes: Certain routes are protected and can only be accessed by authorized users based on their roles.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+### User Registration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Access the registration page.
+2. Fill out the registration form with your desired username, email, password, and role selection (admin or user).
+3. Click the "Register" button to create a new account.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### User Login
 
-## Deploy on Vercel
+1. Access the login page.
+2. Enter your email and password.
+3. Click the "Sign in" button to log in.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Protected Routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Users with the "admin" role have access to admin-specific routes (e.g., "/admin").
+- Users with the "user" role have access to user-specific routes (e.g., "/home", "/about").
+
